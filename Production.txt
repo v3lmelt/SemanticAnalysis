@@ -1,8 +1,0 @@
-0 expr -> expr1 + expr2 {expr.addr = new Temp(); gen(expr.addr '=' expr1.addr '+' expr2.addr);}
-1 expr -> expr1 - expr2 {expr.addr = new Temp();gen(expr.addr '=' expr1.addr '-' expr2.addr);}
-2 expr -> expr1 * expr2 {expr.addr = new Temp(); gen(expr.addr '=' expr1.addr '*' expr2.addr);}
-3 expr -> expr1 / expr2 {expr.addr = new Temp();gen(expr.addr '=' expr1.addr '/' expr2.addr);}
-4 expr -> (expr1){expr.addr=expr1.addr;}
-5 expr -> id {expr.addr=top.get(id.lexeme);}
-6 expr -> INTLITERAL {expr.addr = INTLITERAL.lexval;}
-7 expr -> FLOATLITERAL {expr.addr = FLOAT.lexval;}
